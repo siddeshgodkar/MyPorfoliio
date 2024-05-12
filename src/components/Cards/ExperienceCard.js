@@ -81,10 +81,22 @@ const Top = styled.div`
 
 const Logo = styled.img`
     height: 50px;
-    background-color: #000'
+    background-color: #0000;
     border-radius: 10px;
     margin-top: 4px;
-    margin-right: 10px;
+    margin-right:20px;
+
+    @media (max-width: 768px){
+        height: 40px;
+    }
+`;
+
+const LogoSecond = styled.img`
+    height: 50px;
+    background-color: #0000;
+    border-radius: 10px;
+    margin-top: 4px;
+    
 
     @media (max-width: 768px){
         height: 40px;
@@ -162,7 +174,7 @@ const ExperienceCard = ({ experience }) => {
     <Card>
         <Top>
             <Logo src={experience.img} />
-            <Logo src={experience.secondImg} />
+            <LogoSecond src={experience.secondImg} />
             <Body> 
                 <Role>{experience.role}</Role>
                 <Company>{experience.company} </Company>
